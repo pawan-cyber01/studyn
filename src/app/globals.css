@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --color-matte-black: #000000;
+  --color-graphite: #0a0a0a;
+  --color-accent-blue: #ffffff;
+  --color-accent-purple: #ffffff;
+  --color-accent-cyan: #ffffff;
+  
+  --shadow-premium: 0 30px 60px -12px rgba(0, 0, 0, 1), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  --shadow-window: 0 50px 100px -20px rgba(0, 0, 0, 1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --glass: rgba(255, 255, 255, 0.01);
+  --glass-border: rgba(255, 255, 255, 0.03);
+  --glass-thick: rgba(0, 0, 0, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+}
+
+/* Premium Scrollbars - Ultra Thin Monochromatic */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+/* Cinematic Monochrome Glassmorphism */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(40px) grayscale(100%);
+  -webkit-backdrop-filter: blur(40px) grayscale(100%);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-dark {
+  background: var(--glass-thick);
+  backdrop-filter: blur(60px) grayscale(100%);
+  -webkit-backdrop-filter: blur(60px) grayscale(100%);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.005);
+  backdrop-filter: blur(80px) grayscale(100%);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Typography Enhancements - Monochrome */
+.heading-premium {
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.text-muted {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Minimalist Gradients */
+.bg-gradient-black {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+}
+
+.bg-glow-mono {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 80%);
+}
+
+/* Window Shadows */
+.window-shadow {
+  box-shadow: var(--shadow-window);
+}
+
+/* Standardized Premium Button System */
+.btn-premium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-premium::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.btn-premium:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-premium:active {
+  transform: scale(0.97) translateY(0);
+}
+
+/* Quote Box Styling */
+.quote-box {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 2.5rem;
+  border-radius: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-box::after {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 120px;
+  font-family: serif;
+  color: rgba(255, 255, 255, 0.02);
+  line-height: 1;
+}
+
+/* Advanced Frosted Glass with Noise */
+.frosted-glass {
+  background: rgba(255, 255, 255, 0.005);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  position: relative;
+  overflow: hidden;
+}
+
+.frosted-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.frosted-glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

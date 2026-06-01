@@ -1,0 +1,79 @@
+add a todo widget with add and delete and checklist options
+
+fix calendra add delete and checklist options also
+
+remove some apps from dock to make it look simple and clean
+
+add google login and make it appear once then asking some educational details to customise the dashboard based on user and to train the ai accordingly and then ask for api key with instructions with links for groq api key.
+
+make ai chat app more interactive and user friendly and train it accordingly
+
+a circular widget that will show users old percentage and give motivated quote"Padle Barna firse itni hi rh jayegi" 
+
+a img widget that will show users uploaded images like mac have.
+
+make the widgetstore with 4 grid having logo under it its name should be visible clearly and when clicked it should open the widget with simple and clean animation.
+
+if the app or widgetstore is already open then when clicked it should minimize the app or widget.
+
+and add the app opening and closing animation style like macbook.
+
+
+
+
+
+
+Build a premium AI-powered resume builder for Studyn.
+Features:
+- ATS-friendly templates
+- developer resume templates
+- export to PDF
+- AI resume suggestions
+- skills optimization
+- live preview
+Add:
+- drag-and-drop sections
+- animated editing transitions
+- modern typography
+Inspired by:
+- Notion
+- Canva
+- modern portfolio builders
+
+
+
+
+Build a premium mini IDE widget for Studyn.
+
+Support:
+- HTML/CSS/JS
+- Python
+- Java
+- C++
+
+Features:
+- syntax highlighting
+- code execution
+- AI coding help
+- split-screen support
+- floating window mode
+
+Add:
+- smooth animations
+- terminal panel
+- file tabs
+- autosave
+
+Inspired by:
+- VS Code
+- Replit
+
+The IDE should:
+- feel lightweight
+- modern
+- immersive
+
+
+
+
+
